@@ -6,8 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E18FFD952D7533BD00ECA136 /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18FFD942D7533BD00ECA136 /* Vision.framework */; };
+		E18FFD972D7533CB00ECA136 /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18FFD962D7533CB00ECA136 /* CoreML.framework */; };
+		E18FFD992D7533D200ECA136 /* CreateML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18FFD982D7533D200ECA136 /* CreateML.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		E18FFD682D75308000ECA136 /* model.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = model.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E18FFD942D7533BD00ECA136 /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
+		E18FFD962D7533CB00ECA136 /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
+		E18FFD982D7533D200ECA136 /* CreateML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CreateML.framework; path = System/Library/Frameworks/CreateML.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -29,6 +38,11 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		E18FFDA42D75376600ECA136 /* First.mlmodel */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = First.mlmodel;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +50,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E18FFD972D7533CB00ECA136 /* CoreML.framework in Frameworks */,
+				E18FFD952D7533BD00ECA136 /* Vision.framework in Frameworks */,
+				E18FFD992D7533D200ECA136 /* CreateML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,7 +62,9 @@
 		E18FFD5F2D75308000ECA136 = {
 			isa = PBXGroup;
 			children = (
+				E18FFDA42D75376600ECA136 /* First.mlmodel */,
 				E18FFD6A2D75308000ECA136 /* model */,
+				E18FFD932D7533BD00ECA136 /* Frameworks */,
 				E18FFD692D75308000ECA136 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +75,16 @@
 				E18FFD682D75308000ECA136 /* model.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E18FFD932D7533BD00ECA136 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E18FFD982D7533D200ECA136 /* CreateML.framework */,
+				E18FFD962D7533CB00ECA136 /* CoreML.framework */,
+				E18FFD942D7533BD00ECA136 /* Vision.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -75,6 +104,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				E18FFD6A2D75308000ECA136 /* model */,
+				E18FFDA42D75376600ECA136 /* First.mlmodel */,
 			);
 			name = model;
 			packageProductDependencies = (
@@ -151,6 +181,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = model/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME)حتاج إلى استخدام الكاميرا لتحليل وضعية الرقب";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -182,6 +213,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = model/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME)حتاج إلى استخدام الكاميرا لتحليل وضعية الرقب";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
